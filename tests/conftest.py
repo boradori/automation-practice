@@ -10,6 +10,10 @@ def setup():
     print('Running method level teardown')
 
 
+def pytest_addoption(parser):
+    parser.addoption('--browser')
+
+
 @pytest.fixture(scope='class')
 def one_time_setup(request):
     print('Running one_time_setup')
@@ -26,7 +30,3 @@ def one_time_setup(request):
     yield driver
     driver.quit()
     print('Running one_time_teardown')
-
-
-def pytest_addoption(parser):
-    parser.addoption('--browser')

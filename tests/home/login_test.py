@@ -9,9 +9,8 @@ class LoginTest(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
     def object_setup(self):
-
         self.login_page = LoginPage(self.driver)
-        self.ts = TestStatus()
+        self.ts = TestStatus(self.driver)
 
     @pytest.mark.run(order=1)
     def test_valid_login(self):
