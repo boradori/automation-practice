@@ -18,11 +18,11 @@ class LoginTest(unittest.TestCase):
             self.login_page.logout()
             self.login_page.navigate_to_login_page()
             self.login_page.login('ry29821@zkeiw.com', 'abcabc')
-            self.ts.mark(self.login_page.verify_login_failed(), 'Invalidity login test')
+            self.ts.mark(self.login_page.verify_login_failed(), 'Invalid login test')
         else:
             self.login_page.navigate_to_login_page()
             self.login_page.login('ry29821@zkeiw.com', 'abcabc')
-            self.ts.mark(self.login_page.verify_login_failed(), 'Invalidity login test')
+            self.ts.mark(self.login_page.verify_login_failed(), 'Invalid login test')
 
     @pytest.mark.run(order=2)
     def test_valid_login(self):

@@ -7,6 +7,7 @@ class LoginPage(SeleniumDriver):
         super().__init__(driver)
         self.driver = driver
 
+    # locators
     contact_link = (By.ID, "contact-link")
     login_link = (By.XPATH, "//a[contains(@title, 'Log in to')]")
     logout_button = (By.LINK_TEXT, "Sign out")
@@ -22,6 +23,9 @@ class LoginPage(SeleniumDriver):
 
     def navigate_to_login_page(self):
         self.driver.find_element(*self.login_link).click()
+
+    def navigate_to_front_page(self):
+        self.driver.get('http://automationpractice.com/index.php')
 
     def login(self, username, password):
         self.driver.implicitly_wait(5)
