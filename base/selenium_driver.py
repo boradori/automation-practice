@@ -28,11 +28,16 @@ class SeleniumDriver:
         except:
             self.log.error("### Exception Occurred when taking screenshot")
 
-    def is_element_present(self, element):
+    def is_element_present(self, locator):
         try:
-            if element is not None:
-                self.log.info("Element present: " + element)
-                return True
+            if locator:
+                element = self.driver.find_element(*locator)
+                if element is not None:
+                    self.log.info("Element is present")
+                    return True
+                else:
+                    self.log.info("Element not present")
+                    return False
             else:
                 self.log.info("Element not present")
                 return False

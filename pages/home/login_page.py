@@ -34,9 +34,7 @@ class LoginPage(SeleniumDriver):
         self.driver.find_element(*self.logout_button).click()
 
     def verify_login_successful(self):
-        current_user = self.driver.find_element(*self.account_link)
-        return self.is_element_present(current_user)
+        return self.is_element_present(self.account_link)
 
     def verify_login_failed(self):
-        failure_message = self.driver.find_element(*self.authentication_failure)
-        return self.is_element_present(failure_message)
+        return self.is_element_present(self.authentication_failure)
