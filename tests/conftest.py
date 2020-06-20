@@ -22,6 +22,9 @@ def one_time_setup(request):
 
     wdf = WebDriverFactory(browser)
     driver = wdf.get_webdriver()
+    login_page = LoginPage(driver)
+    login_page.navigate_to_login_page()
+    login_page.login('revay29821@zkeiw.com', 'RA^@*95QaOav')
 
     if request.cls is not None:
         request.cls.driver = driver
