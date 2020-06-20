@@ -3,15 +3,22 @@ from base.webdriverfactory import WebDriverFactory
 from pages.home.login_page import LoginPage
 
 
-@pytest.fixture()
+def pytest_addoption(parser):
+    parser.addoption('--browser')
+
+
+@pytest.fixture(scope='function')
 def setup():
     print('Running method level setup')
     yield
     print('Running method level teardown')
 
 
-def pytest_addoption(parser):
-    parser.addoption('--browser')
+@pytest.fixture(scope='function')
+def front_page_setup():
+    print('Running method level setup: front_page')
+    yield
+    print('Running method level teardown: front_page')
 
 
 @pytest.fixture(scope='class')
