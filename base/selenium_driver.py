@@ -28,10 +28,45 @@ class SeleniumDriver:
         except:
             self.log.error("### Exception Occurred when taking screenshot")
 
+    def get_element(self, locator):
+        element = None
+        try:
+            element = self.driver.find_element(*locator)
+            self.log.info("Element found with locator: " + locator)
+        except:
+            self.log.info("Element not found with locator: " + locator)
+        return element
+
+    def get_element_list(self, locator):
+        elements = None
+        try:
+            elements = self.driver.find_elements(*locator)
+            self.log.info("Element list found with locator: " + locator)
+        except:
+            self.log.info("Element list not found with locator: " + locator)
+        return elements
+
+    def click_element(self, locator):
+        try:
+            element = self.get_element(locator)
+            element.click()
+            self.log.info("Clicked on element with locator: " + locator)
+        except:
+            self.log.info("Cannot click on the element with locator " + locator)
+
+    def send_keys(self, data, locator):
+        try:
+            element = self.get_element(locator)
+            element.send_keys(data)
+            self.log.info("Sent data on element with locator: " + locator)
+        except:
+            self.log.info("Cannot send data on the element with locator: " + locator)
+
     def is_element_present(self, locator):
         try:
             if locator:
-                element = self.driver.find_element(*locator)
+                # element = self.driver.find_element(*locator)
+                element = self.get_element(locator)
                 if element is not None:
                     self.log.info("Element is present")
                     return True
