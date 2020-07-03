@@ -3,6 +3,8 @@ from utilities.util import Util
 import logging
 import time
 import os
+from selenium.common.exceptions import ElementNotVisibleException, ElementNotSelectableException, NoSuchElementException
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class SeleniumDriver:
@@ -28,13 +30,26 @@ class SeleniumDriver:
         except:
             self.log.error("### Exception Occurred when taking screenshot")
 
+    def wait_for_element(self, locator):
+        element = None
+        wait = WebDriverWait(self.driver, 5, poll_frequency=1,
+                             ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
+                                                 NoSuchElementException])
+        try:
+            element = wait.until(lambda dr: dr.find_element(*locator))
+            self.log.info("Wait...")
+        except:
+            self.log.info("Element does not show up for 5 seconds with locator: " + locator[1])
+        return element
+
     def get_element(self, locator):
         element = None
         try:
-            element = self.driver.find_element(*locator)
-            self.log.info("Element found with locator: " + locator)
+            # element = self.driver.find_element(*locator)
+            element = self.wait_for_element(locator)
+            self.log.info("Element found with locator: " + locator[1])
         except:
-            self.log.info("Element not found with locator: " + locator)
+            self.log.info("Element not found with locator: " + locator[1])
         return element
 
     def get_element_list(self, locator):
@@ -65,16 +80,19 @@ class SeleniumDriver:
     def is_element_present(self, locator):
         try:
             if locator:
-                element = self.driver.find_element(*locator)
+                # element = self.driver.find_element(*locator)
+                element = self.get_element(locator)
+                # element = self.wait_for_element(locator)
+
                 if element is not None:
-                    self.log.info("Element is present")
+                    self.log.info("Element is present with locator: " + locator[1])
                     return True
                 else:
-                    self.log.info("Element not present")
+                    self.log.info("Element is NOT present with locator: " + locator[1])
                     return False
             else:
-                self.log.info("Element not present")
+                self.log.info("Element is NOT present with locator: " + locator[1])
                 return False
         except:
-            print("Element not present")
+            self.log.info("Element is NOT present with locator: " + locator[1])
             return False
