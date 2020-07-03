@@ -22,8 +22,8 @@ def front_page_setup():
 
 
 @pytest.fixture(scope='class')
-def one_time_setup(request):
-    print('Running one_time_setup')
+def class_setup(request):
+    print('Running class_setup')
 
     browser = request.config.getoption('--browser')
 
@@ -40,4 +40,4 @@ def one_time_setup(request):
 
     yield driver
     driver.quit()
-    print('Running one_time_teardown')
+    print('Running class_teardown')
