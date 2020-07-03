@@ -65,8 +65,7 @@ class SeleniumDriver:
     def is_element_present(self, locator):
         try:
             if locator:
-                # element = self.driver.find_element(*locator)
-                element = self.get_element(locator)
+                element = self.driver.find_element(*locator)
                 if element is not None:
                     self.log.info("Element is present")
                     return True
@@ -77,5 +76,5 @@ class SeleniumDriver:
                 self.log.info("Element not present")
                 return False
         except:
-            print("Element not found")
+            print("Element not present")
             return False
