@@ -1,5 +1,4 @@
 from utilities.custom_logger import custom_logger
-from utilities.util import Util
 import logging
 import time
 import os
@@ -12,7 +11,6 @@ class SeleniumDriver:
 
     def __init__(self, driver):
         self.driver = driver
-        self.util = Util()
 
     def get_screenshot(self, message):
         file_name = message + "_" + str(round(time.time() * 1000)) + ".png"
