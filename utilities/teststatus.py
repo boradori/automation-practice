@@ -26,7 +26,7 @@ class TestStatus(SeleniumDriver):
                 self.get_screenshot(message)
         except:
             self.result_list.append("FAIL")
-            self.log.error("### EXCEPTION Occurred")
+            self.log.error("### EXCEPTION Occurred ")
             self.get_screenshot(message)
 
     def mark(self, result, message):
@@ -36,10 +36,10 @@ class TestStatus(SeleniumDriver):
         self.set_result(result, message)
 
         if "FAIL" in self.result_list:
-            self.log.error("### TEST FAILED")
+            self.log.error("### TEST FAILED\n")
             self.result_list.clear()
             assert False
         else:
-            self.log.info("### TEST SUCCESSFUL")
+            self.log.info("### TEST SUCCESSFUL\n")
             self.result_list.clear()
             assert True

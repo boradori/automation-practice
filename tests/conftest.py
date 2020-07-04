@@ -1,6 +1,6 @@
 import pytest
 from base.webdriverfactory import WebDriverFactory
-from pages.home.login_page import LoginPage
+from pages.login_page import LoginPage
 
 
 def pytest_addoption(parser):

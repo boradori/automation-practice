@@ -10,8 +10,8 @@ def custom_logger(log_level=logging.DEBUG):
     # by default, log all messages
     logger.setLevel(logging.DEBUG)
 
-    # file_handler = logging.FileHandler("{0}.log".format(logger_name), mode='w')
-    file_handler = logging.FileHandler("automation.log", mode='w') # mode='a' to append
+    # file_handler = logging.FileHandler("reports/{0}.log".format(logger_name), mode='w')
+    file_handler = logging.FileHandler("reports/automation.log", mode='w')  # mode='a' to append
     # file_handler = logging.StreamHandler()
     file_handler.setLevel(log_level)
 

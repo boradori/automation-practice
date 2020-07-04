@@ -243,7 +243,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>htmlreports.html</h1>
-    <p>Report generated on 03-Jul-2020 at 16:00:34 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 04-Jul-2020 at 14:24:05 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -262,8 +262,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.8.2</td></tr></table>
     <h2>Summary</h2>
-    <p>5 tests ran in 13.01 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>2 tests ran in 12.87 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -277,59 +277,28 @@ function filter_table(elem) {
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/home/front_page_test.py::FrontPageTest::test_number_of_items</td>
-          <td class="col-duration">0.05</td>
+          <td class="col-name">tests/login_test.py::LoginTest::test_invalid_login</td>
+          <td class="col-duration">2.76</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m FrontPage:front_page.py:34 Number of product cards: 7
-[32mINFO    [0m TestStatus:teststatus.py:18 ### VERIFICATION SUCCESSFUL :: + Number of items on front page test<br/></div></td></tr></tbody>
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m SeleniumDriver:selenium_driver.py:33 Wait...
+[32mINFO    [0m SeleniumDriver:selenium_driver.py:56 Element found with locator: a[class=&#x27;account&#x27;] &gt; span 
+[32mINFO    [0m SeleniumDriver:selenium_driver.py:99 Element is present with locator: a[class=&#x27;account&#x27;] &gt; span 
+[32mINFO    [0m SeleniumDriver:selenium_driver.py:33 Wait...
+[32mINFO    [0m SeleniumDriver:selenium_driver.py:56 Element found with locator: //li[contains(text(),&#x27;Authentication failed.&#x27;)]
+[32mINFO    [0m SeleniumDriver:selenium_driver.py:99 Element is present with locator: //li[contains(text(),&#x27;Authentication failed.&#x27;)]
+[32mINFO    [0m TestStatus:teststatus.py:18 ### VERIFICATION SUCCESSFUL :: + Invalid login test<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/home/front_page_test.py::FrontPageTest::test_popular_items</td>
-          <td class="col-duration">0.11</td>
+          <td class="col-name">tests/login_test.py::LoginTest::test_valid_login</td>
+          <td class="col-duration">2.50</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m FrontPage:selenium_driver.py:40 Wait...
-[32mINFO    [0m FrontPage:selenium_driver.py:50 Element found with locator: //ul[@id=&#x27;homefeatured&#x27; and contains(@class, &#x27;active&#x27;)]
-[32mINFO    [0m FrontPage:selenium_driver.py:88 Element is present
-[32mINFO    [0m TestStatus:teststatus.py:18 ### VERIFICATION SUCCESSFUL :: + Popular items test<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/home/front_page_test.py::FrontPageTest::test_best_sellers_items</td>
-          <td class="col-duration">0.09</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m FrontPage:selenium_driver.py:40 Wait...
-[32mINFO    [0m FrontPage:selenium_driver.py:50 Element found with locator: //ul[@id=&#x27;blockbestsellers&#x27; and contains(@class, &#x27;active&#x27;)]
-[32mINFO    [0m FrontPage:selenium_driver.py:88 Element is present
-[32mINFO    [0m TestStatus:teststatus.py:18 ### VERIFICATION SUCCESSFUL :: + Best sellers items test<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/home/front_page_test.py::FrontPageTest::test_search_dropdown</td>
-          <td class="col-duration">4.31</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m FrontPage:selenium_driver.py:40 Wait...
-[32mINFO    [0m FrontPage:selenium_driver.py:50 Element found with locator: //h1[contains(text(), &#x27;Blouse&#x27;)]
-[32mINFO    [0m FrontPage:selenium_driver.py:88 Element is present
-[32mINFO    [0m TestStatus:teststatus.py:18 ### VERIFICATION SUCCESSFUL :: + Search dropdown test<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/home/front_page_test.py::FrontPageTest::test_search_results</td>
-          <td class="col-duration">1.07</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m FrontPage:selenium_driver.py:40 Wait...
-[32mINFO    [0m FrontPage:selenium_driver.py:50 Element found with locator: search_query_top
-[32mINFO    [0m FrontPage:selenium_driver.py:40 Wait...
-[32mINFO    [0m TestStatus:teststatus.py:18 ### VERIFICATION SUCCESSFUL :: + Search results test
+            <div class="log"> -------------------------------Captured log call-------------------------------- <br/>[32mINFO    [0m SeleniumDriver:selenium_driver.py:33 Wait...
+[32mINFO    [0m SeleniumDriver:selenium_driver.py:56 Element found with locator: a[class=&#x27;account&#x27;] &gt; span 
+[32mINFO    [0m SeleniumDriver:selenium_driver.py:99 Element is present with locator: a[class=&#x27;account&#x27;] &gt; span 
+[32mINFO    [0m TestStatus:teststatus.py:18 ### VERIFICATION SUCCESSFUL :: + Valid login test
 [32mINFO    [0m TestStatus:teststatus.py:43 ### TEST SUCCESSFUL<br/></div></td></tr></tbody></table></body></html>

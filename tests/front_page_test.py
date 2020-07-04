@@ -1,4 +1,4 @@
-from pages.home.front_page import FrontPage
+from pages.front_page import FrontPage
 from utilities.teststatus import TestStatus
 import unittest
 import pytest
