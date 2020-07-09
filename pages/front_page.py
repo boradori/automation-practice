@@ -23,12 +23,27 @@ class FrontPage(SeleniumDriver):
     _submit_search_btn = (By.XPATH, "//button[@name='submit_search']")
     _blouse_title = (By.XPATH, "//h1[contains(text(), 'Blouse')]")
     _printed_title = (By.XPATH, "//span[contains(text(), 'printed')]")
+    _faded_short_sleeve = (By.XPATH, "//div[@class='right-block']/h5/a[@title='Faded Short Sleeve T-shirts']")
+    _add_faded_short_sleeve_to_cart_btn = (By.XPATH, "//div[@class='right-block']/h5/a[@title='Faded Short Sleeve "
+                                                     "T-shirts']/../../div[@class='button-container']//span[text() = "
+                                                     "'Add to cart']")
+    _proceed_to_checkout_btn = (By.XPATH, "//span[contains(text(),'Proceed to checkout')]")
+    _cart_title = (By.ID, "cart_title")
 
     def get_popular_product_cards(self):
         return self.get_elements(self._popular_product_names)
 
     def get_best_sellers_product_cards(self):
         return self.get_elements(self._best_sellers_product_names)
+
+    def get_faded_short_sleeve(self):
+        return self.get_element(self._faded_short_sleeve)
+
+    def add_faded_short_sleeve_to_cart(self):
+        self.click_element(self._add_faded_short_sleeve_to_cart_btn)
+
+    def get_proceed_to_checkout_btn(self):
+        return self.get_element(self._proceed_to_checkout_btn)
 
     def verify_number_of_items(self, total):
         self.log.info(f'Number of product cards: {len(self.get_popular_product_cards())}')
@@ -64,3 +79,6 @@ class FrontPage(SeleniumDriver):
         search_box.send_keys(Keys.ENTER)
         heading = self.wait_for_element(self._printed_title)
         return len(self.driver.find_elements(By.CSS_SELECTOR, ".product-container")) == 5 and heading
+
+    def verity_cart_page(self):
+        return self.is_element_present(self._cart_title)
