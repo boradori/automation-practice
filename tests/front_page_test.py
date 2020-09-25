@@ -1,7 +1,7 @@
 from pages.front_page import FrontPage
 from pages.login_page import LoginPage
 from selenium.webdriver.common.action_chains import ActionChains
-from utilities.teststatus import TestStatus
+from utilities.status import Status
 import unittest
 import pytest
 
@@ -13,31 +13,31 @@ class FrontPageTest(unittest.TestCase):
     def object_setup(self):
         self.front_page = FrontPage(self.driver)
         self.login_page = LoginPage(self.driver)
-        self.ts = TestStatus(self.driver)
+        self.status = Status(self.driver)
 
     @pytest.mark.run(order=3)
     def test_number_of_items(self):
-        self.ts.mark(self.front_page.verify_number_of_items(7), 'Number of items on front page test')
+        self.status.mark(self.front_page.verify_number_of_items(7), 'Number of items on front page test')
 
     @pytest.mark.run(order=4)
     def test_popular_items(self):
-        self.ts.mark(self.front_page.verify_popular_items('Faded Short Sleeve T-shirts',
+        self.status.mark(self.front_page.verify_popular_items('Faded Short Sleeve T-shirts',
                                                           'Printed Chiffon Dress'),
                      'Popular items test')
 
     @pytest.mark.run(order=5)
     def test_best_sellers_items(self):
-        self.ts.mark(self.front_page.verify_best_sellers_items('Printed Chiffon Dress',
+        self.status.mark(self.front_page.verify_best_sellers_items('Printed Chiffon Dress',
                                                                'Printed Dress'),
                      'Best sellers items test')
 
     @pytest.mark.run(order=6)
     def test_search_dropdown(self):
-        self.ts.mark(self.front_page.verify_search_dropdown(), 'Search dropdown test')
+        self.status.mark(self.front_page.verify_search_dropdown(), 'Search dropdown test')
 
     @pytest.mark.run(order=7)
     def test_search_results(self):
-        self.ts.mark(self.front_page.verify_search_results(), 'Search results test')
+        self.status.mark(self.front_page.verify_search_results(), 'Search results test')
 
     @pytest.mark.run(order=8)
     def test_add_to_cart_no_session(self):

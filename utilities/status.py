@@ -3,11 +3,11 @@ from base.selenium_driver import SeleniumDriver
 import logging
 
 
-class TestStatus(SeleniumDriver):
+class Status(SeleniumDriver):
     log = custom_logger(logging.INFO)
 
     def __init__(self, driver):
-        super(TestStatus, self).__init__(driver)
+        super(Status, self).__init__(driver)
         self.result_list = []
 
     def set_result(self, result, message):
