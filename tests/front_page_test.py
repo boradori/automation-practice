@@ -48,4 +48,4 @@ class FrontPageTest(unittest.TestCase):
             ActionChains(self.driver).move_to_element(self.front_page.get_faded_short_sleeve()).perform()
             self.front_page.add_faded_short_sleeve_to_cart()
             self.front_page.get_proceed_to_checkout_btn().click()
-            self.ts.mark_final(self.front_page.verity_cart_page(), 'Add to cart w/o session test')
+            self.status.mark_final(self.front_page.verity_cart_page(), 'Add to cart w/o session test')

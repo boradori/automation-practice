@@ -5,6 +5,6 @@ from tests.front_page_test import FrontPageTest
 login_test = unittest.TestLoader().loadTestsFromTestCase(LoginTest)
 front_page_test = unittest.TestLoader().loadTestsFromTestCase(FrontPageTest)
 
-test = unittest.TestSuite([login_test, front_page_test])
+smoke_test = unittest.TestSuite([login_test, front_page_test])
 
-unittest.TextTestRunner(verbosity=2).run(test)
+unittest.TextTestRunner(verbosity=2).run(smoke_test)
