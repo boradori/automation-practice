@@ -1,12 +1,11 @@
 from pages.front_page import FrontPage
 from pages.login_page import LoginPage
-from selenium.webdriver.common.action_chains import ActionChains
 from utilities.status import Status
 import unittest
 import pytest
 
 
-@pytest.mark.usefixtures('class_setup')
+@pytest.mark.usefixtures('class_setup_with_login')
 class FrontPageTest(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
@@ -17,6 +16,7 @@ class FrontPageTest(unittest.TestCase):
 
     @pytest.mark.run(order=3)
     def test_number_of_items(self):
+        self.login_page.navigate_to_front_page()
         self.status.mark(self.front_page.verify_number_of_items(7), 'Number of items on front page test')
 
     @pytest.mark.run(order=4)
@@ -27,6 +27,7 @@ class FrontPageTest(unittest.TestCase):
 
     @pytest.mark.run(order=5)
     def test_best_sellers_items(self):
+
         self.status.mark(self.front_page.verify_best_sellers_items('Printed Chiffon Dress',
                                                                'Printed Dress'),
                      'Best sellers items test')
@@ -43,9 +44,9 @@ class FrontPageTest(unittest.TestCase):
     def test_add_to_cart_no_session(self):
         if self.login_page.verify_login_successful():
             self.login_page.logout()
-            self.driver.get("http://automationpractice.com/index.php")
+            self.login_page.navigate_to_front_page()
             self.driver.implicitly_wait(5)
-            ActionChains(self.driver).move_to_element(self.front_page.get_faded_short_sleeve()).perform()
+            self.front_page.move_to_faded_short_sleeve()
             self.front_page.add_faded_short_sleeve_to_cart()
             self.front_page.get_proceed_to_checkout_btn().click()
-            self.status.mark_final(self.front_page.verity_cart_page(), 'Add to cart w/o session test')
+            self.status.mark(self.front_page.verity_cart_page(), 'Add to cart w/o session test')

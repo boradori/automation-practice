@@ -15,31 +15,31 @@ class Status(SeleniumDriver):
             if result is not None:
                 if result:
                     self.result_list.append("PASS")
-                    self.log.info("### VERIFICATION SUCCESSFUL :: + " + message)
+                    self.log.info("------ SUCCESSFUL :: + " + message)
                 else:
                     self.result_list.append("FAIL")
-                    self.log.error("### VERIFICATION FAILED :: + " + message)
+                    self.log.error("------ FAILED :: + " + message)
                     self.get_screenshot(message)
             else:
                 self.result_list.append("FAIL")
-                self.log.error("### VERIFICATION FAILED :: + " + message)
+                self.log.error("------ FAILED :: + " + message)
                 self.get_screenshot(message)
         except:
             self.result_list.append("FAIL")
-            self.log.error("### EXCEPTION Occurred ")
+            self.log.error("------ EXCEPTION Occurred")
             self.get_screenshot(message)
+
+    # def mark(self, result, message):
+    #     self.set_result(result, message)
 
     def mark(self, result, message):
         self.set_result(result, message)
 
-    def mark_final(self, result, message):
-        self.set_result(result, message)
-
         if "FAIL" in self.result_list:
-            self.log.error("### TEST FAILED\n")
+            self.log.error("------ TEST FAILED\n")
             self.result_list.clear()
-            assert False
+            assert True == False
         else:
-            self.log.info("### TEST SUCCESSFUL\n")
+            self.log.info("------ TEST SUCCESSFUL\n")
             self.result_list.clear()
-            assert True
+            assert True == True

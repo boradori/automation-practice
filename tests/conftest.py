@@ -29,10 +29,6 @@ def class_setup(request):
 
     wdf = WebDriverFactory(browser)
     driver = wdf.get_webdriver()
-    login_page = LoginPage(driver)
-    login_page.navigate_to_login_page()
-    login_page.login('revay29821@zkeiw.com', 'RA^@*95QaOav')
-    login_page.navigate_to_front_page()
 
     if request.cls is not None:
         request.cls.driver = driver
@@ -41,3 +37,24 @@ def class_setup(request):
     yield driver
     driver.quit()
     print('Running class_teardown')
+
+
+@pytest.fixture(scope="class")
+def class_setup_with_login(request):
+    print("Running class_setup_with_login")
+
+    browser = request.config.getoption("--browser")
+
+    wdf = WebDriverFactory(browser)
+    driver = wdf.get_webdriver()
+    login_page = LoginPage(driver)
+    login_page.navigate_to_login_page()
+    login_page.login('revay29821@zkeiw.com', 'RA^@*95QaOav')
+
+    if request.cls is not None:
+        request.cls.driver = driver
+        request.cls.browser = browser
+
+    yield driver
+    driver.quit()
+    print("Running class_teardown_with_login")

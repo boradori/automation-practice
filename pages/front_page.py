@@ -14,6 +14,7 @@ class FrontPage(SeleniumDriver):
         self.driver = driver
 
     # locators
+    _logo_img = (By.CSS_SELECTOR, "img[class='logo img-responsive']")
     _popular_btn = (By.CSS_SELECTOR, "a[class='homefeatured']")
     _best_sellers_btn = (By.CSS_SELECTOR, "a[class='blockbestsellers']")
     _popular_product_names = (By.XPATH, "//ul[@id='homefeatured']/*/div[@class='product-container']/div["
@@ -39,6 +40,10 @@ class FrontPage(SeleniumDriver):
     def get_faded_short_sleeve(self):
         return self.get_element(self._faded_short_sleeve)
 
+    def move_to_faded_short_sleeve(self):
+        faded_short_sleeve = self.get_element(self._faded_short_sleeve)
+        self.move_to_element(faded_short_sleeve)
+
     def add_faded_short_sleeve_to_cart(self):
         self.click_element(self._add_faded_short_sleeve_to_cart_btn)
 
@@ -46,6 +51,7 @@ class FrontPage(SeleniumDriver):
         return self.get_element(self._proceed_to_checkout_btn)
 
     def verify_number_of_items(self, total):
+        self.wait_for_element(self._logo_img)
         self.log.info(f'Number of product cards: {len(self.get_popular_product_cards())}')
         return len(self.get_popular_product_cards()) == total
 

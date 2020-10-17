@@ -21,11 +21,11 @@ class LoginPage(SeleniumDriver):
         self.get_element(self._email_field).clear()
         self.get_element(self._password_field).clear()
 
-    def navigate_to_login_page(self):
-        self.click_element(self._login_link)
+    # def navigate_to_login_page(self):
+    #     self.click_element(self._login_link)
 
-    def navigate_to_front_page(self):
-        self.driver.get('http://automationpractice.com/index.php')
+    # def navigate_to_front_page(self):
+    #     self.driver.get('http://automationpractice.com/index.php')
 
     def login(self, username, password):
         self.driver.implicitly_wait(5)

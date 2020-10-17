@@ -28,4 +28,4 @@ class LoginTest(unittest.TestCase):
     def test_valid_login(self):
         self.login_page.navigate_to_login_page()
         self.login_page.login('revay29821@zkeiw.com', 'RA^@*95QaOav')
-        self.status.mark_final(self.login_page.verify_login_successful(), 'Valid login test')
+        self.status.mark(self.login_page.verify_login_successful(), 'Valid login test')
