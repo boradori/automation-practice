@@ -27,26 +27,18 @@ class FrontPageTest(unittest.TestCase):
 
     @pytest.mark.run(order=5)
     def test_best_sellers_items(self):
-
         self.status.mark(self.front_page.verify_best_sellers_items('Printed Chiffon Dress',
                                                                'Printed Dress'),
                      'Best sellers items test')
 
     @pytest.mark.run(order=6)
-    def test_search_dropdown(self):
-        self.status.mark(self.front_page.verify_search_dropdown(), 'Search dropdown test')
-
-    @pytest.mark.run(order=7)
-    def test_search_results(self):
-        self.status.mark(self.front_page.verify_search_results(), 'Search results test')
-
-    @pytest.mark.run(order=8)
     def test_add_to_cart_no_session(self):
         if self.login_page.verify_login_successful():
             self.login_page.logout()
-            self.login_page.navigate_to_front_page()
-            self.driver.implicitly_wait(5)
-            self.front_page.move_to_faded_short_sleeve()
-            self.front_page.add_faded_short_sleeve_to_cart()
-            self.front_page.get_proceed_to_checkout_btn().click()
-            self.status.mark(self.front_page.verity_cart_page(), 'Add to cart w/o session test')
+
+        self.login_page.navigate_to_front_page()
+        self.driver.implicitly_wait(5)
+        self.front_page.move_to_faded_short_sleeve()
+        self.front_page.add_faded_short_sleeve_to_cart()
+        self.front_page.get_proceed_to_checkout_btn().click()
+        self.status.mark(self.front_page.verity_cart_page(), 'Add to cart w/o session test')

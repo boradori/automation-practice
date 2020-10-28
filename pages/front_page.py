@@ -21,9 +21,10 @@ class FrontPage(SeleniumDriver):
                                        "@class='right-block']/*/a[@class='product-name']")
     _best_sellers_product_names = (By.CSS_SELECTOR, "#blockbestsellers .product-container .right-block .product-name")
     _search_box = (By.ID, "search_query_top")
-    _submit_search_btn = (By.XPATH, "//button[@name='submit_search']")
-    _blouse_title = (By.XPATH, "//h1[contains(text(), 'Blouse')]")
+    _submit_search_btn = (By.CSS_SELECTOR, "button[name='submit_search']")
+
     _printed_title = (By.XPATH, "//span[contains(text(), 'printed')]")
+
     _faded_short_sleeve = (By.XPATH, "//div[@class='right-block']/h5/a[@title='Faded Short Sleeve T-shirts']")
     _add_faded_short_sleeve_to_cart_btn = (By.XPATH, "//div[@class='right-block']/h5/a[@title='Faded Short Sleeve "
                                                      "T-shirts']/../../div[@class='button-container']//span[text() = "
@@ -57,34 +58,35 @@ class FrontPage(SeleniumDriver):
 
     def verify_popular_items(self, first_item, last_item):
         self.click_element(self._popular_btn)
-        item_1 = self.get_popular_product_cards()[0].get_attribute('title')
-        item_2 = self.get_popular_product_cards()[6].get_attribute('title')
+        popular_products = self.get_popular_product_cards()
+        item_1 = popular_products[0].get_attribute('title')
+        item_2 = popular_products[6].get_attribute('title')
         is_popular_active = self.is_element_present(
             (By.XPATH, "//ul[@id='homefeatured' and contains(@class, 'active')]"))
-        return item_1 == first_item and item_2 == last_item and is_popular_active
+        is_best_sellers_active = self.is_element_present(
+            (By.XPATH, "//ul[@id='blockbestsellers' and contains(@class, 'active')]"))
+        return item_1 == first_item and item_2 == last_item and len(popular_products) == 7 and is_popular_active and not is_best_sellers_active
 
     def verify_best_sellers_items(self, first_item, last_item):
         self.click_element(self._best_sellers_btn)
-        item_1 = self.get_best_sellers_product_cards()[0].get_attribute('title')
-        item_2 = self.get_best_sellers_product_cards()[6].get_attribute('title')
+        best_seller_products = self.get_best_sellers_product_cards()
+        item_1 = best_seller_products[0].get_attribute('title')
+        item_2 = best_seller_products[6].get_attribute('title')
+        is_popular_active = self.is_element_present(
+            (By.XPATH, "//ul[@id='homefeatured' and contains(@class, 'active')]"))
         is_best_sellers_active = self.is_element_present(
             (By.XPATH, "//ul[@id='blockbestsellers' and contains(@class, 'active')]"))
-        return item_1 == first_item and item_2 == last_item and is_best_sellers_active
+        return item_1 == first_item and item_2 == last_item and len(best_seller_products) == 7 and is_best_sellers_active and not is_popular_active
 
-    def verify_search_dropdown(self):
+    def search_item_dropdown(self, keyword):
         search_box = self.get_element(self._search_box)
-        self.send_keys('blouse', self._search_box)
+        self.send_keys(keyword, self._search_box)
         time.sleep(3)
         search_box.send_keys(Keys.ARROW_DOWN)
         search_box.send_keys(Keys.ENTER)
-        return self.is_element_present(self._blouse_title)
 
-    def verify_search_results(self):
-        search_box = self.get_element(self._search_box)
-        self.send_keys('printed', self._search_box)
-        search_box.send_keys(Keys.ENTER)
-        heading = self.wait_for_element(self._printed_title)
-        return len(self.driver.find_elements(By.CSS_SELECTOR, ".product-container")) == 5 and heading
+    def search_items(self, keyword):
+        self.send_keys((keyword, Keys.ENTER), self._search_box)
 
     def verity_cart_page(self):
         return self.is_element_present(self._cart_title)
