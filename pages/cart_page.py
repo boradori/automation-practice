@@ -28,6 +28,8 @@ class CartPage(SeleniumDriver):
     _tax = (By.ID, "total_tax")
     _total_after_tax = (By.ID, "total_price_container")
 
+    _proceed_to_checkout = (By.CSS_SELECTOR, "a[title='Proceed to checkout']:nth-child(1)")
+
     def get_items_in_cart(self, more_details=True):
         cart_items = self.get_elements(self._cart_items)
         items_in_cart = []
@@ -90,3 +92,6 @@ class CartPage(SeleniumDriver):
 
     def verify_cart_is_empty(self):
         return self.is_element_present(self._empty_cart_msg) and not self.is_element_present(self._cart_items)
+
+    def click_proceed_to_checkout(self):
+        self.click_element(self._proceed_to_checkout)
