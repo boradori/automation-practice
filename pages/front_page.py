@@ -15,6 +15,7 @@ class FrontPage(SeleniumDriver):
 
     # locators
     _logo_img = (By.CSS_SELECTOR, "img[class='logo img-responsive']")
+    _contact_us_btn = (By.XPATH, "//div[@id='contact-link']/a")
     _popular_btn = (By.CSS_SELECTOR, "a[class='homefeatured']")
     _best_sellers_btn = (By.CSS_SELECTOR, "a[class='blockbestsellers']")
     _popular_product_names = (By.XPATH, "//ul[@id='homefeatured']/*/div[@class='product-container']/div["
@@ -90,3 +91,7 @@ class FrontPage(SeleniumDriver):
 
     def verity_cart_page(self):
         return self.is_element_present(self._cart_title)
+
+    def click_contact_us_btn(self):
+        contact_us_btn = self.wait_for_element(self._contact_us_btn)
+        self.click_element(None, contact_us_btn)
