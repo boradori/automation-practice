@@ -5,7 +5,7 @@ import unittest
 import pytest
 
 
-@pytest.mark.usefixtures('class_setup_with_login')
+@pytest.mark.usefixtures('class_setup')
 class FrontPageTest(unittest.TestCase):
 
     @pytest.fixture(autouse=True)

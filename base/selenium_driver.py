@@ -20,6 +20,9 @@ class SeleniumDriver:
     def navigate_to_login_page(self):
         self.driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account")
 
+    def navigate_to_cart_page(self):
+        self.driver.get("http://automationpractice.com/index.php?controller=order")
+
     def get_screenshot(self, message):
         file_name = message + "_" + str(round(time.time() * 1000)) + ".png"
         screenshot_dir = "../screenshots/"
@@ -92,18 +95,18 @@ class SeleniumDriver:
                 element = self.get_element(locator)
                 element.click()
                 self.log.info("Clicked on element with locator: " + locator[1])
-            elif element is not None:
+            elif element:
                 element.click()
                 self.log.info("Clicked on element")
         except:
             if locator:
                 self.log.info("Cannot click on element with locator " + locator[1])
-            elif element is not None:
+            elif element:
                 self.log.info("Cannot click on element")
 
     def click_element_js(self, element):
         try:
-            if element is not None:
+            if element:
                 self.driver.execute_script("arguments[0].click();", element)
                 self.log.info("Clicked on element with js executor method")
         except:
@@ -115,20 +118,20 @@ class SeleniumDriver:
                 element = self.get_element(locator)
                 element.send_keys(data)
                 self.log.info("Sent data on element with locator: " + locator[1])
-            elif element is not None:
+            elif element:
                 element.send_keys(data)
                 self.log.info("Sent data on element")
         except:
             if locator:
                 self.log.info("Cannot send data on the element with locator: " + locator[1])
-            elif element is not None:
+            elif element:
                 self.log.info("Cannot send data on the element")
 
     def is_element_present(self, locator, element=None):
         try:
             if locator:
                 element = self.get_element(locator)
-            if element is not None:
+            if element:
                 if locator:
                     self.log.info("Element is present with locator: " + locator[1])
                 else:
@@ -145,7 +148,7 @@ class SeleniumDriver:
         try:
             if locator:
                 elements = self.get_elements(locator)
-            if elements is not None:
+            if elements:
                 if locator:
                     self.log.info("Elements are present with locator: " + locator[1])
                 else:
@@ -163,7 +166,7 @@ class SeleniumDriver:
         try:
             if locator:
                 element = self.get_element(locator)
-            if element is not None:
+            if element:
                 is_enabled = element.is_enabled()
                 if locator:
                     self.log.info("Element is enabled with locator: " + locator[1])
@@ -181,7 +184,7 @@ class SeleniumDriver:
         try:
             if locator:
                 element = self.get_element(locator)
-            if element is not None:
+            if element:
                 is_displayed = element.is_displayed()
                 if locator:
                     self.log.info("Element is displayed with locator: " + locator[1])
@@ -208,7 +211,7 @@ class SeleniumDriver:
 
     def scroll_into_view_js(self, element):
         try:
-            if element is not None:
+            if element:
                 self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
                 self.log.info("Scroll into element with js executor method")
         except:

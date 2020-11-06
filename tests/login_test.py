@@ -4,7 +4,7 @@ import unittest
 import pytest
 
 
-@pytest.mark.usefixtures('class_setup', 'setup')
+@pytest.mark.usefixtures('class_setup')
 class LoginTest(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
