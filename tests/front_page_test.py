@@ -17,16 +17,24 @@ class FrontPageTest(unittest.TestCase):
     @pytest.mark.run(order=3)
     def test_number_of_items(self):
         self.login_page.navigate_to_front_page()
-        self.status.mark(self.front_page.verify_number_of_items(7), 'Number of items on front page test')
+
+        result1 = self.front_page.verify_number_of_items(7, 'popular')
+        self.status.mark(result1, 'Number of popular items on front page test')
+
+        self.front_page.select_category('best')
+        result2 = self.front_page.verify_number_of_items(7, 'best')
+        self.status.mark(result2, 'Number of best seller items on front page test')
 
     @pytest.mark.run(order=4)
     def test_popular_items(self):
+        self.front_page.select_category('popular')
         self.status.mark(self.front_page.verify_popular_items('Faded Short Sleeve T-shirts',
                                                               'Printed Chiffon Dress'),
                          'Popular items test')
 
     @pytest.mark.run(order=5)
     def test_best_sellers_items(self):
+        self.front_page.select_category('best')
         self.status.mark(self.front_page.verify_best_sellers_items('Printed Chiffon Dress',
                                                                    'Printed Dress'),
                          'Best sellers items test')
@@ -47,4 +55,4 @@ class FrontPageTest(unittest.TestCase):
         self.front_page.navigate_to_login_page()
         self.login_page.login('revay29821@zkeiw.com', 'RA^@*95QaOav')
         result2 = self.login_page.verify_number_of_items_in_cart()
-        self.status.mark(result2, 'Add to cart w/o session preserves items in cart test')
+        self.status.mark(result2, 'Add to cart w/o session preserves items in cart after login process test')
