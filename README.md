@@ -7,7 +7,7 @@ Libraries: selenium, ddt, pytest, pytest-ordering, pytest-html
 Install the libraries by running the following command:
 ```pip install -r requirements.txt```
 
-## Commands:
+## Execution:
 ```
 py.test -v -s tests/test_suite.py
 ```
@@ -25,8 +25,6 @@ py.test -v -s tests/test_suite.py --html=htmlreports.html
 
 ## What does this test suite cover?
 The test suite covers basic work flows of automationpractice.com.
-
-checkout_test, contact_test
 
 ### Login test - invalid credential and successful login process
 - **Invalid login**
