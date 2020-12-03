@@ -19,12 +19,13 @@ class ResultsPage(SeleniumDriver):
     _no_results_heading = (By.CSS_SELECTOR, "p[class='alert alert-warning']")
     _heading = (By.XPATH, "//h1[contains(text(), 'Search')]")
     _products = (By.CSS_SELECTOR, ".product-container")
-    _item_name = (By.CSS_SELECTOR, "a[class='product-name']")
-    _item_price = (By.CSS_SELECTOR, "span[itemprop='price']")
+    _item_name = (By.CSS_SELECTOR, "div:nth-child(2) a[class='product-name']")
+    _item_price = (By.CSS_SELECTOR, "div:nth-child(2) > div > span[itemprop='price']")
 
     _number_of_items_in_cart = (By.CSS_SELECTOR, "a[title='View my shopping cart'] > span[class='ajax_cart_quantity']")
     _items_in_cart = (By.CSS_SELECTOR, "dl[class='products'] > dt")
 
+    _item_modal = (By.XPATH, "//div[contains(@style, 'display: block') and @id='layer_cart']")
     _add_to_cart_btn = (By.CSS_SELECTOR, "a[title='Add to cart']")
     _continue_shopping = (By.CSS_SELECTOR, "span[title='Continue shopping']")
     _proceed_to_checkout = (By.CSS_SELECTOR, "a[title='Proceed to checkout']")
@@ -62,16 +63,17 @@ class ResultsPage(SeleniumDriver):
             add_to_cart_btn = product.find_element(*self._add_to_cart_btn)
 
             self.click_element_js(add_to_cart_btn)
+            self.wait_for_element(self._item_modal)
 
             if idx + 1 == len(items_list):
-                proceed_to_checkout_btn = self.wait_for_element(self._proceed_to_checkout)
                 item = self.get_item_details(product)
                 self.items_in_cart.append(item)
+                proceed_to_checkout_btn = self.wait_for_element(self._proceed_to_checkout)
                 self.click_element(None, proceed_to_checkout_btn)
             else:
-                continue_shopping_btn = self.wait_for_element(self._continue_shopping)
                 item = self.get_item_details(product)
                 self.items_in_cart.append(item)
+                continue_shopping_btn = self.wait_for_element(self._continue_shopping)
                 self.click_element(None, continue_shopping_btn)
 
     def verify_cart_modal_with_correct_quantity(self):

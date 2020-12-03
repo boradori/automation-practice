@@ -1,0 +1,309 @@
+12/03/2020 01:51:02 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 01:51:02 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 01:51:05 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 01:51:05 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:51:06 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:51:06 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:51:06 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:51:07 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:51:07 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:51:07 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:51:08 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:51:08 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:51:10 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:51:10 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 01:51:11 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:51:11 PM -ResultsPage - INFO: Element list found with locator: dl[class='products'] > dt
+12/03/2020 01:51:11 PM -Status - INFO: ------ SUCCESSFUL :: + Add multiple products to cart test
+12/03/2020 01:51:11 PM -Status - INFO: ------ TEST SUCCESSFUL
+
+12/03/2020 01:51:12 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:51:13 PM -SeleniumDriver - INFO: Clicked on element
+12/03/2020 01:51:16 PM -SeleniumDriver - INFO: Clicked on element
+12/03/2020 01:51:19 PM -SeleniumDriver - INFO: Clicked on element
+12/03/2020 01:51:22 PM -SeleniumDriver - INFO: Wait for //p[contains(text(), 'Your shopping cart is empty.')]
+12/03/2020 01:51:24 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 01:51:24 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 01:51:27 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 01:51:27 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:51:28 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:51:28 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:51:28 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:51:28 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:51:29 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:51:29 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:51:29 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:51:29 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:51:30 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:51:30 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 01:51:31 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:51:31 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:51:31 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 01:51:31 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607032291364.png
+12/03/2020 01:51:31 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 01:51:32 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:51:32 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:51:33 PM -SeleniumDriver - INFO: Clicked on element
+12/03/2020 01:51:36 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:51:36 PM -Status - INFO: ------ SUCCESSFUL :: + Remove an item from cart test
+12/03/2020 01:51:36 PM -Status - INFO: ------ TEST SUCCESSFUL
+
+12/03/2020 01:51:36 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:51:36 PM -SeleniumDriver - INFO: Clicked on element
+12/03/2020 01:51:39 PM -SeleniumDriver - INFO: Clicked on element
+12/03/2020 01:51:42 PM -SeleniumDriver - INFO: Wait for //p[contains(text(), 'Your shopping cart is empty.')]
+12/03/2020 01:51:42 PM -SeleniumDriver - INFO: Element found with locator: //p[contains(text(), 'Your shopping cart is empty.')]
+12/03/2020 01:51:42 PM -SeleniumDriver - INFO: Element is present with locator: //p[contains(text(), 'Your shopping cart is empty.')]
+12/03/2020 01:51:47 PM -SeleniumDriver - INFO: Element not found with locator: table#cart_summary tbody > tr
+12/03/2020 01:51:47 PM -SeleniumDriver - INFO: Element is NOT present
+12/03/2020 01:51:47 PM -Status - INFO: ------ SUCCESSFUL :: + Remove all items from cart test
+12/03/2020 01:51:47 PM -Status - INFO: ------ TEST SUCCESSFUL
+
+12/03/2020 01:53:57 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 01:53:57 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 01:54:00 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 01:54:00 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:54:01 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:54:01 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:54:01 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:54:02 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:54:02 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:54:02 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:54:02 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:54:03 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:54:03 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:54:03 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 01:54:04 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:54:04 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:54:05 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:54:05 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 01:54:05 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607032445048.png
+12/03/2020 01:54:05 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 01:55:00 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 01:55:04 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 01:55:07 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 01:55:07 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:55:08 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:55:08 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:55:09 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:55:09 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:55:10 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:55:10 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 01:55:10 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:55:10 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 01:55:10 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 01:55:10 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 01:55:14 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 01:55:14 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:55:15 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 01:55:15 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 01:55:15 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607032515194.png
+12/03/2020 01:55:15 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:04:49 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:04:50 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:04:53 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:04:54 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:04:55 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:04:55 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:04:55 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:04:55 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:04:56 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:04:56 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:04:56 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:04:56 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:04:57 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:04:57 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:04:58 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:04:58 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:04:58 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 02:04:58 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607033098349.png
+12/03/2020 02:04:58 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:06:17 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:06:18 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:06:21 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:06:22 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:06:23 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:06:23 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:06:23 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:06:23 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:06:24 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:06:24 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:06:24 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:06:24 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:06:25 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:06:25 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:06:26 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:06:26 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:06:26 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 02:06:26 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607033186481.png
+12/03/2020 02:06:26 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:07:49 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:07:50 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:07:53 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:07:53 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:07:54 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:07:54 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:07:54 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:07:55 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:07:55 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:07:55 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:07:55 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:07:56 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:07:57 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:07:57 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:07:58 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:07:58 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:07:59 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:07:59 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 02:07:59 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607033279187.png
+12/03/2020 02:07:59 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:08:35 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:08:36 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:08:39 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:08:40 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:08:40 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:08:40 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:08:40 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:08:41 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:08:41 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:08:41 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:08:41 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:08:42 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:08:42 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:08:42 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:08:43 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:08:43 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:08:43 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:08:44 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 02:08:44 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607033324065.png
+12/03/2020 02:08:44 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:11:57 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:11:58 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:12:02 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:12:02 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:12:03 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:12:03 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:12:03 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:12:03 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:12:04 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:12:04 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:12:04 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:12:04 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:12:05 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:12:05 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:12:06 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:12:06 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:12:06 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:12:06 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 02:12:07 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607033526995.png
+12/03/2020 02:12:07 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:13:17 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:13:19 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:13:22 PM -ResultsPage - INFO: Wait for locator: //div[@class='product-container']
+12/03/2020 02:13:22 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:13:22 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:13:23 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:13:23 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:13:23 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:13:24 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:13:24 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:13:24 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:13:24 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:13:26 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:13:26 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:13:27 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:13:27 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:13:27 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:13:27 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 02:13:27 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607033607746.png
+12/03/2020 02:13:27 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:21:51 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:21:51 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:21:54 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:21:54 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:21:55 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:21:55 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:21:55 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:21:56 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:21:56 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:21:56 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:21:57 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:21:57 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:21:58 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:21:58 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:21:59 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:21:59 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:21:59 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:21:59 PM -Status - INFO: ------ SUCCESSFUL :: + Matching items in cart from results page and cart page test
+12/03/2020 02:21:59 PM -Status - INFO: ------ TEST SUCCESSFUL
+
+12/03/2020 02:24:05 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:24:05 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:24:08 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:24:09 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:24:10 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:24:10 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:24:10 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:24:10 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:24:11 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:24:11 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:24:11 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:24:12 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:24:13 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:24:13 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:24:14 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:24:15 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:24:15 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:24:15 PM -Status - ERROR: ------ FAILED :: + Matching items in cart from results page and cart page test
+12/03/2020 02:24:15 PM -Status - INFO: Screenshot saved to directory: /home/medq/PycharmProjects/automation-practice/base/../screenshots/Matching items in cart from results page and cart page test_1607034255143.png
+12/03/2020 02:24:15 PM -Status - ERROR: ------ TEST FAILED
+
+12/03/2020 02:25:03 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:25:03 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:25:06 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:25:06 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:25:07 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:25:07 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:25:07 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:25:08 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:25:08 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:25:08 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:25:08 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:25:09 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:25:09 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:25:09 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:25:10 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:25:10 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:25:10 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:25:10 PM -Status - INFO: ------ SUCCESSFUL :: + Matching items in cart from results page and cart page test
+12/03/2020 02:25:10 PM -Status - INFO: ------ TEST SUCCESSFUL
+
+12/03/2020 02:25:17 PM -FrontPage - INFO: Element found with locator: search_query_top
+12/03/2020 02:25:18 PM -FrontPage - INFO: Sent data on element with locator: search_query_top
+12/03/2020 02:25:21 PM -ResultsPage - INFO: Wait for locator: .product-container
+12/03/2020 02:25:22 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:25:22 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:25:22 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:25:22 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:25:23 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:25:23 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:25:24 PM -ResultsPage - INFO: Wait for span[title='Continue shopping']
+12/03/2020 02:25:24 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:25:24 PM -ResultsPage - INFO: Clicked on element with js executor method
+12/03/2020 02:25:25 PM -ResultsPage - INFO: Wait for //div[contains(@style, 'display: block') and @id='layer_cart']
+12/03/2020 02:25:25 PM -ResultsPage - INFO: Wait for a[title='Proceed to checkout']
+12/03/2020 02:25:26 PM -ResultsPage - INFO: Clicked on element
+12/03/2020 02:25:26 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:25:27 PM -SeleniumDriver - INFO: Element list found with locator: table#cart_summary tbody > tr
+12/03/2020 02:25:27 PM -Status - INFO: ------ SUCCESSFUL :: + Matching items in cart from results page and cart page test
+12/03/2020 02:25:27 PM -Status - INFO: ------ TEST SUCCESSFUL
+
