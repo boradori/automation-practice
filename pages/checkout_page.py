@@ -35,7 +35,7 @@ class CheckoutPage(SeleniumDriver):
     _tos_checkbox = (By.ID, "cgv")
     _proceed_to_checkout_shipping = (By.CSS_SELECTOR, "button[name='processCarrier']")
     _error_msg = (By.CSS_SELECTOR, "p[class='fancybox-error']")
-    _error_msg_close_btn = (By.CSS_SELECTOR, "a[class*='fancybox-close']")
+    _error_msg_close_btn = (By.CSS_SELECTOR, "a[class='fancybox-item fancybox-close']")
 
     _payment_heading = (By.XPATH, "//h1[text()='Please choose your payment method']")
     _pay_by_bank_wire_btn = (By.CSS_SELECTOR, "a[title='Pay by bank wire']")
@@ -79,12 +79,14 @@ class CheckoutPage(SeleniumDriver):
 
     def click_proceed_to_checkout_address_btn(self):
         self.click_element(self._proceed_to_checkout_address)
+        self.wait_for_element(self._shipping_heading)
 
     def click_proceed_to_checkout_shipping_btn(self):
         self.click_element(self._proceed_to_checkout_shipping)
 
     def dismiss_error_msg(self):
         self.click_element(self._error_msg_close_btn)
+        self.wait_for_element(self._error_msg_close_btn, False)
 
     def check_tos(self):
         self.click_element(self._tos_checkbox)

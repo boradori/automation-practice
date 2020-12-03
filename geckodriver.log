@@ -58,3 +58,159 @@ JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError
 1607034299819	Marionette	INFO	Listening on port 41905
 1607034299911	Marionette	WARN	TLS certificate errors will be ignored for this session
 1607034310912	Marionette	INFO	Stopped listening on port 41905
+1607034455726	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8ftndg"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607034457542	Marionette	INFO	Listening on port 46297
+1607034457649	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607034472336	Marionette	INFO	Stopped listening on port 46297
+1607034473876	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGXR3Hz"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607034475918	Marionette	INFO	Listening on port 42513
+1607034476019	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607034503138	Marionette	INFO	Stopped listening on port 42513
+1607034504670	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilegvxk8i"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607034506610	Marionette	INFO	Listening on port 44117
+1607034506696	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607034525365	Marionette	INFO	Stopped listening on port 44117
+1607034526887	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerH21IB"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607034528830	Marionette	INFO	Listening on port 46381
+1607034528919	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607034576829	Marionette	INFO	Stopped listening on port 46381
+1607034578353	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileF6F6m2"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607034580427	Marionette	INFO	Listening on port 37911
+1607034580481	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607034617355	Marionette	INFO	Stopped listening on port 37911
+1607034618871	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNrM01W"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607034620731	Marionette	INFO	Listening on port 44313
+1607034620806	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607034625642	Marionette	INFO	Stopped listening on port 44313
+1607035144600	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJ62sCH"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035146645	Marionette	INFO	Listening on port 32867
+1607035146730	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1607035205542	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePT6Jcp"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035207449	Marionette	INFO	Listening on port 34491
+1607035207567	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607035233884	Marionette	INFO	Stopped listening on port 34491
+1607035391396	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilepKE3YU"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035393159	Marionette	INFO	Listening on port 35259
+1607035393219	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607035405517	Marionette	INFO	Stopped listening on port 35259
+1607035406945	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8qcM4f"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035408793	Marionette	INFO	Listening on port 41635
+1607035408875	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607035436028	Marionette	INFO	Stopped listening on port 41635
+1607035437446	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile91gZ4E"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035439401	Marionette	INFO	Listening on port 42605
+1607035439470	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607035455685	Marionette	INFO	Stopped listening on port 42605
+1607035457207	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTjt9zW"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035459115	Marionette	INFO	Listening on port 40891
+1607035459234	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607035508042	Marionette	INFO	Stopped listening on port 40891
+1607035509586	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileeRJ7ey"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035511650	Marionette	INFO	Listening on port 37303
+1607035511710	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607035536490	Marionette	INFO	Stopped listening on port 37303
+1607035538003	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilewBXJio"
+dpkg-query: warning: parsing file '/var/lib/dpkg/status' near line 13859 package 'image-shrink':
+ missing 'Maintainer' field
+console.info: MINT: Trying to use the system region (based on LANG).
+console.info: MINT: System region is US
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.info: MINT: Loading search-config defaults.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 161: TypeError: date is undefined
+1607035539783	Marionette	INFO	Listening on port 44173
+1607035539825	Marionette	WARN	TLS certificate errors will be ignored for this session
+1607035545094	Marionette	INFO	Stopped listening on port 44173
