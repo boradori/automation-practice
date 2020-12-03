@@ -30,6 +30,7 @@ class FrontPage(SeleniumDriver):
     _add_faded_short_sleeve_to_cart_btn = (By.XPATH, "//div[@class='right-block']/h5/a[@title='Faded Short Sleeve "
                                                      "T-shirts']/../../div[@class='button-container']//span[text() = "
                                                      "'Add to cart']")
+    _item_modal = (By.XPATH, "//div[contains(@style, 'display: block') and @id='layer_cart']")
     _proceed_to_checkout_btn = (By.XPATH, "//span[contains(text(),'Proceed to checkout')]")
     _cart_title = (By.ID, "cart_title")
 
@@ -55,8 +56,9 @@ class FrontPage(SeleniumDriver):
     def add_faded_short_sleeve_to_cart(self):
         self.click_element(self._add_faded_short_sleeve_to_cart_btn)
 
-    def get_proceed_to_checkout_btn(self):
-        return self.get_element(self._proceed_to_checkout_btn)
+    def click_proceed_to_checkout_btn(self):
+        self.wait_for_element(self._item_modal)
+        self.click_element(self._proceed_to_checkout_btn)
 
     def verify_number_of_items(self, total, category):
         self.wait_for_element(self._logo_img)

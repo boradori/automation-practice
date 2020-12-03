@@ -48,7 +48,7 @@ class FrontPageTest(unittest.TestCase):
         self.driver.implicitly_wait(5)
         self.front_page.move_to_faded_short_sleeve()
         self.front_page.add_faded_short_sleeve_to_cart()
-        self.front_page.get_proceed_to_checkout_btn().click()
+        self.front_page.click_proceed_to_checkout_btn()
         result1 = self.front_page.verity_cart_page()
         self.status.mark(result1, 'Add to cart w/o session test')
 
