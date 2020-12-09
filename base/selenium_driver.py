@@ -4,6 +4,7 @@ import time
 import os
 from selenium.common.exceptions import ElementNotVisibleException, ElementNotSelectableException, NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 
@@ -125,6 +126,21 @@ class SeleniumDriver:
                 self.log.info("Cannot send data on the element with locator: " + locator[1])
             elif element:
                 self.log.info("Cannot send data on the element")
+
+    def clear_field(self, locator, element=None):
+        try:
+            if locator:
+                element = self.get_element(locator)
+                element.send_keys(Keys.CONTROL, 'a', Keys.DELETE)
+                self.log.info("Cleared field on element with locator: " + locator[1])
+            elif element:
+                element.send_keys(Keys.CONTROL, 'a', Keys.DELETE)
+                self.log.info("Cleared field on element")
+        except:
+            if locator:
+                self.log.info("Cannot clear field on the element with locator: " + locator[1])
+            elif element:
+                self.log.info("Cannot clear field on the element")
 
     def is_element_present(self, locator, element=None):
         try:
