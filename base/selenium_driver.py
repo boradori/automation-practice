@@ -13,6 +13,9 @@ class SeleniumDriver:
     def __init__(self, driver):
         self.driver = driver
         self.actions = ActionChains(self.driver)
+        self.wait = WebDriverWait(self.driver, 5, poll_frequency=1,
+                                  ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
+                                                      NoSuchElementException])
 
     def navigate_to_front_page(self):
         self.driver.get("http://automationpractice.com/index.php")
@@ -41,15 +44,13 @@ class SeleniumDriver:
 
     def wait_for_element(self, locator, until=True):
         element = None
-        wait = WebDriverWait(self.driver, 5, poll_frequency=1,
-                             ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
-                                                 NoSuchElementException])
+
         try:
             if until:
-                element = wait.until(lambda dr: dr.find_element(*locator))
+                element = self.wait.until(lambda dr: dr.find_element(*locator))
                 self.log.info("Wait for " + locator[1])
             else:
-                element = wait.until_not(lambda dr: dr.find_element(*locator))
+                element = self.wait.until_not(lambda dr: dr.find_element(*locator))
                 self.log.info("Wait for " + locator[1] + " to be NOT present")
         except:
             self.log.info("Element does not show up for 5 seconds with locator: " + locator[1])
@@ -57,15 +58,13 @@ class SeleniumDriver:
 
     def wait_for_elements(self, locator, until=True):
         elements = None
-        wait = WebDriverWait(self.driver, 5, poll_frequency=1,
-                             ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
-                                                 NoSuchElementException])
+
         try:
             if until:
-                elements = wait.until(lambda dr: dr.find_elements(*locator))
+                elements = self.wait.until(lambda dr: dr.find_elements(*locator))
                 self.log.info("Wait for locator: " + locator[1])
             else:
-                elements = wait.until_not(lambda dr: dr.find_elements(*locator))
+                elements = self.wait.until_not(lambda dr: dr.find_elements(*locator))
                 self.log.info("Wait for locator: " + locator[1] + " to be NOT present")
         except:
             self.log.info("Elements do not show up for 5 seconds with locator: " + locator[1])
