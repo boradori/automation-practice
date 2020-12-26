@@ -1366,3 +1366,31 @@
 12/03/2020 02:48:40 PM -Status - INFO: ------ SUCCESSFUL :: + Contact us page test
 12/03/2020 02:48:40 PM -Status - INFO: ------ TEST SUCCESSFUL
 
+12/25/2020 05:25:16 PM -SeleniumDriver - INFO: Element not found with locator: a[class='account'] > span 
+12/25/2020 05:25:16 PM -SeleniumDriver - INFO: Element is NOT present
+12/25/2020 05:25:17 PM -SeleniumDriver - INFO: Element found with locator: email
+12/25/2020 05:25:17 PM -SeleniumDriver - INFO: Element found with locator: passwd
+12/25/2020 05:25:17 PM -SeleniumDriver - INFO: Element found with locator: email
+12/25/2020 05:25:17 PM -SeleniumDriver - INFO: Sent data on element with locator: email
+12/25/2020 05:25:17 PM -SeleniumDriver - INFO: Element found with locator: passwd
+12/25/2020 05:25:17 PM -SeleniumDriver - INFO: Sent data on element with locator: passwd
+12/25/2020 05:25:17 PM -SeleniumDriver - INFO: Element found with locator: SubmitLogin
+12/25/2020 05:25:18 PM -SeleniumDriver - INFO: Clicked on element with locator: SubmitLogin
+12/25/2020 05:25:18 PM -SeleniumDriver - INFO: Element found with locator: //li[contains(text(),'Authentication failed.')]
+12/25/2020 05:25:18 PM -SeleniumDriver - INFO: Element is present with locator: //li[contains(text(),'Authentication failed.')]
+12/25/2020 05:25:18 PM -Status - INFO: ------ SUCCESSFUL :: + Invalid login test
+12/25/2020 05:25:18 PM -Status - INFO: ------ TEST SUCCESSFUL
+
+12/25/2020 05:25:19 PM -SeleniumDriver - INFO: Element found with locator: email
+12/25/2020 05:25:19 PM -SeleniumDriver - INFO: Element found with locator: passwd
+12/25/2020 05:25:19 PM -SeleniumDriver - INFO: Element found with locator: email
+12/25/2020 05:25:19 PM -SeleniumDriver - INFO: Sent data on element with locator: email
+12/25/2020 05:25:19 PM -SeleniumDriver - INFO: Element found with locator: passwd
+12/25/2020 05:25:19 PM -SeleniumDriver - INFO: Sent data on element with locator: passwd
+12/25/2020 05:25:19 PM -SeleniumDriver - INFO: Element found with locator: SubmitLogin
+12/25/2020 05:25:20 PM -SeleniumDriver - INFO: Clicked on element with locator: SubmitLogin
+12/25/2020 05:25:20 PM -SeleniumDriver - INFO: Element found with locator: a[class='account'] > span 
+12/25/2020 05:25:20 PM -SeleniumDriver - INFO: Element is present with locator: a[class='account'] > span 
+12/25/2020 05:25:20 PM -Status - INFO: ------ SUCCESSFUL :: + Valid login test
+12/25/2020 05:25:20 PM -Status - INFO: ------ TEST SUCCESSFUL
+

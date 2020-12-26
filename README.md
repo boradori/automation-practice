@@ -7,6 +7,21 @@ Libraries: selenium, ddt, pytest, pytest-ordering, pytest-html
 Install the libraries by running the following command:
 ```pip install -r requirements.txt```
 
+Since we are using pytest-env, you need to make pytest.ini file in the root of the test suite.
+
+```touch pytest.ini```
+
+In **pytest.ini**, add the following snippet after replacing USERNAME, PASSWORD, INVALID_USERNAME, and INVALID_PASSWORD with your own.
+
+```
+[pytest]
+env =
+    USERNAME=YOUR_VALID_USERNAME_COMES_HERE
+    PASSWORD=YOUR_VALID_PASSWORD_COMES_HERE
+    INVALID_USERNAME=ANY_INVALID_USERNAME_COMES_HERE
+    INVALID_PASSWORD=ANY_INVALID_PASSWORD_COMES_HERE
+```
+
 ## Execution:
 ```
 py.test -v -s tests/test_suite.py

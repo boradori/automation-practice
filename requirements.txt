@@ -1,5 +1,6 @@
 selenium
 ddt
 pytest
+pytest-env
 pytest-ordering
 pytest-html
