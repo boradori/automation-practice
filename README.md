@@ -7,7 +7,7 @@ Libraries: selenium, ddt, pytest, pytest-ordering, pytest-html
 Install the libraries by running the following command:
 ```pip install -r requirements.txt```
 
-Since we are using pytest-env, you need to make pytest.ini file in the root of the test suite.
+Since we are using **pytest-env**, you need to make pytest.ini file in the root of the test suite.
 
 ```touch pytest.ini```
 
