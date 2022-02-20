@@ -2,68 +2,85 @@
 
 ## Python Selenium WebDriver Automation on http://automationpractice.com/index.php
 
-Libraries: selenium, ddt, pytest, pytest-env, pytest-ordering, pytest-html
+Libraries: selenium, pytest, pytest-env, pytest-ordering, pytest-html
 
 Install the libraries by running the following command:
 ```pip install -r requirements.txt```
 
-Since we are using **pytest-env**, you need to make **pytest.ini** file in the root of the test suite.
+- Create an account in the test website if you do not have one.
 
-```touch pytest.ini```
+In order to run the tests, you will need to set `ENV_PASSWORD` and `ENV_USERNAME` environment variables.
 
-In **pytest.ini**, add the following snippet after replacing USERNAME, PASSWORD, INVALID_USERNAME, and INVALID_PASSWORD with your own.
-
-```
-[pytest]
-env =
-    USERNAME=YOUR_VALID_USERNAME_COMES_HERE
-    PASSWORD=YOUR_VALID_PASSWORD_COMES_HERE
-    INVALID_USERNAME=ANY_INVALID_USERNAME_COMES_HERE
-    INVALID_PASSWORD=ANY_INVALID_PASSWORD_COMES_HERE
+```.env
+export ENV_PASSWORD=password_goes_here
+export ENV_USERNAME=username_goes_here
 ```
 
 ## Execution:
+`pytest -m all` runs all test suites.
+Choose the browser of your choice from chrome, firefox, and safari.
+Chrome is the default so omitting `--browser` works the same as `--browser chrome`.
 ```
-py.test -v -s tests/test_suite.py
+pytest -m all
+```
+```
+pytest -m all --browser chrome
+```
+If you want to use firefox, you have to specify `--browser firefox` like below.
+```
+pytest -m all --browser firefox
 ```
 
-Choose the browser of your choice. Default is Chrome. Choose from chrome, firefox, ie, and safari.
-```
-py.test -v -s tests/test_suite.py --browser=firefox
-```
-
-If you need to generate test report in HTML, add --html=FILENAME.html
+If you need to generate test report in HTML, add --html FILENAME.html
 
 ```
-py.test -v -s tests/test_suite.py --html=htmlreports.html
+pytest -m all --browser chrome --html htmlreports.html
 ```
 
 ## What does this test suite cover?
 The test suite covers basic work flows of automationpractice.com.
 
 ### Login test - invalid credential and successful login process
-- **Invalid login**
-- **Valid login**
+```
+pytest -m login
+```
+- **test_invalid_login_with_invalid_email_address**
+- **test_invalid_login_with_invalid_password**
+- **test_invalid_login_with_invalid_email_address_and_invalid_password**
+- **test_valid_login**
 
 ### Front page test - items on front page and add to cart without session
-- **Number of popular items and best seller items** - both categories display 7 items
-- **Popular items** - count and order of popular items
-- **Best seller items** - count and order of best seller items
-- **Add to cart without** session and preservation of items in cart after login process
+```
+pytest -m front
+```
+- **test_user_can_see_correct_number_of_items**
+- **test_user_can_toggle_best_seller_items**
+- **test_user_can_toggle_popular_items**
+- **test_user_can_add_to_cart_without_sign_in**
 
 ### Search test - search items and the results
-- **No results** - items that are not in the store shows no results message
-- **Search item via dropdown menu** - select a single item and redirects to the item details page
-- **Search items** - search results page
+```
+pytest -m search
+```
+- **test_user_can_search_item_via_dropdown_option**
+- **test_user_can_see_no_results**
+- **test_user_can_see_results**
 
 ### Cart test - add and remove items from cart
-- **Add items to cart** - search items and a list of items to the cart
-- **Cart items in results page and cart page** - comparison of cart items in both pages
-- **Remove an item from cart** - getting rid of **n**th item among cart items
-- **Remove all items from cart**
+```
+pytest -m cart
+```
+- **test_user_can_add_items_to_cart**
+- **test_user_can_see_items_in_cart_page**
+- **test_user_can_remove_item_from_cart**
+- **test_user_can_remove_all_items_from_cart**
+- **test_user_can_proceed_to_checkout_page_from_cart_page_with_session**
+- **test_user_can_proceed_to_checkout_page_from_cart_page_without_session**
 
 ### Checkout test - order summary, shipping, and payment method
-- **Order summary and sign in** - order summary page and authentication requirement if signed out
-- **Address**
-- **Shipping** - check shipping TOS and proceed to payment method page
-- **Payment** - select payment method and finish checkout process
+```
+pytest -m checkout
+```
+- **test_user_can_login_on_checkout_page**
+- **test_user_can_enter_shipping_address**
+- **test_user_can_enter_payment_information**

@@ -1,60 +1,30 @@
-import pytest
-from base.webdriverfactory import WebDriverFactory
-from pages.login_page import LoginPage
+from tests import config
+
+pytest_plugins = ['tests.fixtures.driver', 'tests.fixtures.page_objects', 'tests.fixtures.components']
 
 
 def pytest_addoption(parser):
-    parser.addoption('--browser')
+    parser.addoption('--browser', action='store', default='chrome')
 
 
-@pytest.fixture(scope='function')
-def setup():
-    print('Running method level setup')
-    yield
-    print('Running method level teardown')
+def pytest_sessionstart(session):
+    config.browser = session.config.getoption('--browser')
+    config.base_url = 'http://automationpractice.com/index.php'
 
 
-@pytest.fixture(scope='function')
-def front_page_setup():
-    print('Running method level setup: front_page')
-    yield
-    print('Running method level teardown: front_page')
-
-
-@pytest.fixture(scope='class')
-def class_setup(request):
-    print('Running class_setup')
-
-    browser = request.config.getoption('--browser')
-
-    wdf = WebDriverFactory(browser)
-    driver = wdf.get_webdriver()
-
-    if request.cls is not None:
-        request.cls.driver = driver
-        request.cls.browser = browser
-
-    yield driver
-    driver.quit()
-    print('Running class_teardown')
-
-
-@pytest.fixture(scope="class")
-def class_setup_with_login(request):
-    print("Running class_setup_with_login")
-
-    browser = request.config.getoption("--browser")
-
-    wdf = WebDriverFactory(browser)
-    driver = wdf.get_webdriver()
-    login_page = LoginPage(driver)
-    login_page.navigate_to_login_page()
-    login_page.login('revay29821@zkeiw.com', 'RA^@*95QaOav')
-
-    if request.cls is not None:
-        request.cls.driver = driver
-        request.cls.browser = browser
-
-    yield driver
-    driver.quit()
-    print("Running class_teardown_with_login")
+# @pytest.fixture(scope='class')
+# def class_setup(request):
+#     print('Running class_setup')
+#
+#     browser = request.config.getoption('--browser')
+#
+#     wdf = WebDriverFactory(browser)
+#     driver = wdf.get_webdriver()
+#
+#     if request.cls is not None:
+#         request.cls.driver = driver
+#         request.cls.browser = browser
+#
+#     yield driver
+#     driver.quit()
+#     print('Running class_teardown')
