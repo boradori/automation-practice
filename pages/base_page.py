@@ -207,10 +207,6 @@ class BasePage:
         wait = WebDriverWait(self.driver, timeout)
         wait.until(expected_conditions.staleness_of(element))
 
-    def _wait_for_elements_to_disappear(self, locator, timeout=10):
-        wait = WebDriverWait(self.driver, timeout)
-        wait.until_not(lambda dr: dr.find_elements(locator['by'], locator['value']))
-
     def _wait_for_element_to_be_selected(self, locator=None, element=None, timeout=10):
         wait = WebDriverWait(self.driver, timeout)
         if element:

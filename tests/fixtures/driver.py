@@ -21,24 +21,24 @@ def get_driver(desired_browser):
     return driver
 
 
-@pytest.fixture()
-def driver(request):
-    _driver = get_driver(config.browser)
-    # _driver.maximize_window()
-    _driver.set_window_position(0, 0)
-    _driver.set_window_size(1920, 1080)
-
-    config.driver = _driver
-
-    def quit_driver():
-        _driver.quit()
-
-    request.addfinalizer(quit_driver)
-
-    _driver.implicitly_wait(10)
-    _driver.get(config.base_url)
-
-    return _driver
+# @pytest.fixture()
+# def driver(request):
+#     _driver = get_driver(config.browser)
+#     # _driver.maximize_window()
+#     _driver.set_window_position(0, 0)
+#     _driver.set_window_size(1920, 1080)
+#
+#     config.driver = _driver
+#
+#     def quit_driver():
+#         _driver.quit()
+#
+#     request.addfinalizer(quit_driver)
+#
+#     _driver.implicitly_wait(10)
+#     _driver.get(config.base_url)
+#
+#     return _driver
 
 
 @pytest.fixture(scope='session')
@@ -46,7 +46,7 @@ def session_driver(request):
     _driver = get_driver(config.browser)
     # _driver.maximize_window()
     _driver.set_window_position(0, 0)
-    _driver.set_window_size(1920, 1080)
+    _driver.set_window_size(1440, 1000)
 
     config.driver = _driver
 

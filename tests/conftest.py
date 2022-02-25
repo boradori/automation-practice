@@ -4,10 +4,12 @@ pytest_plugins = ['tests.fixtures.driver', 'tests.fixtures.page_objects', 'tests
 
 
 def pytest_addoption(parser):
+    # https://docs.python.org/2/library/argparse.html#action
     parser.addoption('--browser', action='store', default='chrome')
 
 
 def pytest_sessionstart(session):
+    # https://docs.pytest.org/en/6.2.x/example/simple.html
     config.browser = session.config.getoption('--browser')
     config.base_url = 'http://automationpractice.com/index.php'
 

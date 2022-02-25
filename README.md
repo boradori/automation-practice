@@ -2,7 +2,7 @@
 
 ## Python Selenium WebDriver Automation on http://automationpractice.com/index.php
 
-Libraries: selenium, pytest, pytest-env, pytest-ordering, pytest-html
+Libraries: selenium, pytest, pytest-env, pytest-ordering, pytest-html, pytest-sugar, pytest-clarity
 
 Install the libraries by running the following command:
 ```pip install -r requirements.txt```
@@ -35,6 +35,11 @@ If you need to generate test report in HTML, add --html FILENAME.html
 
 ```
 pytest -m all --browser chrome --html htmlreports.html
+```
+
+In addition, you can also add -vv at the end of the command in order to see more readable differences in failures.
+```
+pytest -m all --browser chrome --html htmlreports.html -vv
 ```
 
 ## What does this test suite cover?

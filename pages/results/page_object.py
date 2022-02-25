@@ -71,10 +71,6 @@ class ResultsPage(BasePage):
         self._wait_for_element_to_appear(locator=locators.RESULTS_HEADING)
         self._wait_for_elements_to_appear(locators.PRODUCTS)
 
-    def wait_for_products_to_disappear(self):
-        logging.info('Waiting for "Products" to disappear."')
-        self._wait_for_elements_to_disappear(locators.PRODUCTS)
-
     def wait_for_no_results_heading_to_disappear(self, element):
         logging.info('Waiting for "No Results Heading" to disappear."')
         self._wait_for_element_to_disappear(element=element)
