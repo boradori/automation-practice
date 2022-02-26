@@ -8,15 +8,18 @@ def get_driver(desired_browser):
     if desired_browser == 'chrome':
         options = webdriver.ChromeOptions()
         options.add_argument('--log-level=3')
-        driver = webdriver.Chrome(chrome_options=options)
+        options.headless = False
+        driver = webdriver.Chrome(options=options)
     elif desired_browser == 'firefox':
         driver = webdriver.Firefox()
     elif desired_browser == 'safari':
         driver = webdriver.Safari()
+    elif desired_browser == 'edge':
+        driver = webdriver.Edge()
     else:
         options = webdriver.ChromeOptions()
         options.add_argument('--log-level=3')
-        driver = webdriver.Chrome(chrome_options=options)
+        driver = webdriver.Chrome(options=options)
 
     return driver
 
