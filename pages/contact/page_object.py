@@ -17,7 +17,10 @@ class ContactPage(BasePage):
 
     def attach_file(self):
         logging.info('Attaching file.')
-        self.attach_file_field.send_keys(os.getcwd()+'/image.jpg')
+        if os.name == 'nt':
+            self.attach_file_field.send_keys(os.getcwd() + '\\image.jpg')
+        else:
+            self.attach_file_field.send_keys(os.getcwd() + '/image.jpg')
 
     def click_submit_inquiry_button(self):
         logging.info('Clicking "Submit inquiry" button.')
