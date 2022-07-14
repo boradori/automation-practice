@@ -3,5 +3,4 @@ pytest
 pytest-env
 pytest-order==1.0.0
 pytest-html
-pytest-sugar
 pytest-clarity
