@@ -1,6 +1,6 @@
 selenium
 pytest
 pytest-env
-pytest-order==1.0.0
+pytest-order
 pytest-html
 pytest-clarity
